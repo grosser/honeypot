@@ -8,6 +8,7 @@ module Honeypot
     
     def honeypot_untouched?
       submitted = params['its_so_sweet']
+      return false if submitted.blank?
       submitted['email'] == 'john@doe.com' && submitted['name'] == '' && submitted['agree']==nil
     end
   end
