@@ -13,6 +13,14 @@ Controller:
 
     before_filter :check_honeypots, :only => [:create]
     
+    OR - if the default render new + flash[:error] is not what you want
+  
+    def create
+      render :action=>'error' and return unless honeypot_untouched?
+      ...
+    end
+
+    
 Inside form:
  
     =honeypot 
