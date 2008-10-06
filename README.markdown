@@ -9,8 +9,10 @@ script/plugin install git://github.com/grosser/honeypot.git
 
 USAGE
 =====
-Controller: before_filter :check_honeypots, :only => [:create]
-Inside form: =honeypot 
+Controller: 
+    before_filter :check_honeypots, :only => [:create]
+Inside form: 
+    =honeypot 
 
 OTHER SOLUTIONS
 ===============
